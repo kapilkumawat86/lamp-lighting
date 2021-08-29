@@ -2,9 +2,14 @@ body {
   background: $body-background-color;
   font-family: arial, serif;
   font-size: 1.3em;
-  min-height: 946px;
+  min-height: 946px !important;
+  min-width: 1200px !important;
 }
 
+.lamp-lighting {
+    min-height: 946px !important;
+    min-width: 1200px !important;
+}
 .selected {
     border-width: 4px;
     border-color: rgba(153, 27, 27, var(--tw-border-opacity));
@@ -15,7 +20,7 @@ body {
 
 .lamp-lighting {
     .lamp {
-        position: fixed;
+        position: absolute;
         bottom: 0;
         left: 0; 
         right: 0; 
@@ -25,7 +30,7 @@ body {
 }
 
 .candle-box {
-    position: fixed;
+    position: absolute;
     width: 100px;
     height: 100px;
     bottom: 287px;

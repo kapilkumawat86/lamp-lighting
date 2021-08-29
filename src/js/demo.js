@@ -1,4 +1,18 @@
-const demo = () => 'Webpack Boilerplate v5.9.0 - SASS/PostCSS, ES6/7, browser sync, source code listing and more.';
-
-// eslint-disable-next-line no-console
-console.log(demo());
+function onClickHandler(event) {
+    const div = document.createElement("div");
+    div.classList.add('flame')
+    div.innerHTML= `
+    <div class="shadows"></div>
+    <div class="top"></div>
+    <div class="middle"></div>
+    <div class="bottom"></div>`
+    event.target.prepend(div)
+}
+function Init() {
+    const candles = document.querySelectorAll('.candle');
+    candles.forEach((candle) => {
+        candle.addEventListener('click', onClickHandler)
+    })
+    console.log(candles)
+}
+Init()
